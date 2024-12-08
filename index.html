@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<div>
+    <div class="wholebody">
+    </div>
+    <!-- <nav> -->
+        <h3 class="h1 ml-2 mt-4 text-lg sm:text-xl mb-4 md:text-2xl"> <span style="color:rgb(9, 9, 90); font-weight: bold; ">RANDO</span>MLY</h3>
+    <!-- </nav> -->
+    <div class="container">
+        <div class="main flex flex-col sm:flex-row md:flex-row items-center flex-wrap gap-4">
+            <div id="text" class="demo">
+                <label>Text Align:</label>
+                <select name="textalign" id="txt" class=" w-full   ">
+                    <!-- <option value="default" selected>Text Align</option> -->
+                    <option value="Left" selected>Left </option>
+                    <option value="Right">Right </option>
+                    <option value="Center">Center </option>
+
+                </select>
+            </div>
+            <div  class="demo">
+                <label class="l1 ">Word:</label>
+                <input id="words" value="50"ml-2" type="text" />
+            </div>
+            <div  class="demo">
+                <label class="l1" >Font-Size:</label>
+                <input id="font" value="13"ml-2" type="number" />
+            </div>
+            <div class="demo">
+                <label for="fontfamily">No of Paragraph:</label>
+                <input id="para" value="3" type="number" />
+            </div>
+            <div id="fontfamilys" class="demo">
+                <label for="fontfamily">Choose Font:</label>
+                <select name="fontfamily" id="fontfamily">
+                    <!-- <option value="default" selected hidden>Choose Fonts</option> -->
+                    <option value="Arial" selected>Arial </option>
+                    <option value="TNM">Times New Roman </option>
+                    <option value="roboto">Roboto </option>
+                    <option value="opensans">Open Sans </option>
+                    <option value="Georgia">Georgia </option>
+
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="btnc">
+        <button class="btn" onclick="getcontent()" id="btn1">GO</button>
+        <button class="btn" onclick="refresh()" id="btn2"><i style="font-size: 20px;"
+                class="fa-solid fa-arrows-rotate"></i></button>
+    </div>
+<div class="area">
+    <div class="textarea w-full md:w-1/2 sm:w-1/2   ">
+        <textarea  placeholder="You are viewing the dummy text in....." readonly style="font-size: 16px;"
+            id="textarea"></textarea>
+        <i class="fa-solid fa-copy mt-4" style="cursor: pointer; font-size: 20px; margin-left: 10px" id="copy"></i>
+    </div>
+</div>
+</div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
