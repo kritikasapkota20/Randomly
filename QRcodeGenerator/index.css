@@ -2,18 +2,21 @@
 body{
     background-color: rgb(122, 122, 239);
 }
-.container{
+.custom-container{
     margin: 30px;
     width:94%;
     height: 490px;
     background-color: white;
     border-radius: 10px;
 }
+.vcards{
+    margin-top: -20px;
+}
 p{
     padding: 10px;
     font-size: 25px;
 }
-.icons{
+.custom-icons{
     display: flex;
     flex-direction: column;
     color:white;
@@ -33,14 +36,22 @@ i{
 i:hover{
     cursor: pointer;
 }
-.body{
+.custom-body{
     display: flex;
     flex-direction: row;
+    /* margin-top: -300px; */
 }
-.fields{
-    margin-left: 120px;
+.custom-fields{
+    margin-left: 160px;
+    /* padding-right: 200px; */
+    /* margin-right: 200px; */
     position: relative;
     /* margin-top: 20px; */
+}
+.custom-inputf{
+    /* margin-left: 150px; */
+    width: 250px;
+
 }
 input{
     width:440px;
@@ -48,17 +59,14 @@ input{
     height: 35px;
     border-radius: 5px;
     outline: none;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-.inputf{
-    margin-left: 150px;
 
-}
- .inputs{
+ .custom-inputs{
     width:390px;
     height: 35px;
 border: 1.2px solid grey;
-margin-bottom: 13px;
+margin-bottom: 5px;
 }
 #vcard label{
     margin-right: 40px;
@@ -68,29 +76,32 @@ h1{
 }
 
 hr{
-    width:300px;
+    width:250px;
     
 }
 button{
     background-color: blue;
-    margin-left: 500px;
+    margin-left: 400px;
     color: white;
     border: none;
     height:50px;
     border-radius: 25px;
     padding: 20px;
     cursor: pointer;
-    margin-top: 10px;
+    /* margin-top: -10px; */
 }
+
+
 button:hover{
     background-color: rgb(97, 97, 249);
 }
+
 
 .vcards label {
     display: inline-block;
     width: 100px; 
     text-align: right;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
 #fname,#lname{
     width: 180px;
@@ -102,12 +113,247 @@ button:hover{
     margin-right: 20px;
 
 }
-.qr,.h{
+.qr,.qrvs,.h,.qrdefault{
     position: absolute;
     top: 0; 
-    right: -300px; 
+    right: -500px; 
     width: 256px;
     height: 256px;
+   
     /* display: none;  */
 }
 
+.qrvs{
+    right:-300px;
+}
+.qr,.qrvs,.qrdefault{
+    margin-top: 40px;
+}
+
+@media(max-width:1180px) and (min-width:900px){
+    .custom-inputs{
+        width:260px;
+        height: 35px;
+    border: 1.2px solid grey;
+    margin-bottom: 13px;
+    }
+    #fname,#lname{
+        width: 120px;
+        height: 35px;
+        border: 1.2px solid grey;
+        
+    }
+    #fname{
+        margin-right: 10px;
+    
+    }
+    .custom-fields{
+        margin-left: 50px;
+    }
+    .custom-inputf{
+        margin-left: 30px;
+        /* width: 170px; */
+    
+    }
+    .qrvs{
+        margin-right: 30px;
+    }
+    /* hr{
+        width:270px;
+        margin-left: 60px;
+
+    } */ 
+    .qr,.h,.qrdefault{
+        position: absolute;
+        top: 0; 
+        right: -280px; 
+        width: 230px;
+        height: 230px;
+        /* margin-top: 420px; */
+        /* display: none;  */
+    }
+    button{
+        margin-left: 250px;
+    }
+   
+}
+@media(max-width:1200px){
+    
+   
+}
+@media(max-width:900px){
+.qr,.qrvs,.qrdefault{
+    position: absolute;
+    top: 0px;
+    right: 60px; 
+    width: 200px;
+    height: 200px;
+    margin-top: 420px;
+}
+.h{
+    margin-top: 380px;
+    right: 10px;
+}
+
+.custom-inputs{
+    width:260px;
+    height: 35px;
+border: 1.2px solid grey;
+margin-bottom: 13px;
+}
+.custom-container{
+    height: 800px;
+}
+
+#fname,#lname{
+    width: 115px;
+    height: 35px;
+    border: 1.2px solid grey;
+    
+}
+button{
+    margin-left:230px ;
+}
+.custom-fields{
+    margin-left: 100px;
+}
+.custom-container{
+    /* height: 1200px; */
+}
+}
+
+@media(max-width:700px){
+   
+    .custom-inputs{
+        width:260px;
+        height: 35px;
+    border: 1.2px solid grey;
+    margin-bottom: 13px;
+    }
+    #fname,#lname{
+        width: 115px;
+        height: 35px;
+        border: 1.2px solid grey;
+        
+    }
+    .custom-fields{
+        margin-left: 80px;
+    }
+    button{
+        margin-left:220px ;
+    }
+    .vcards{
+        margin-left: -100px;
+    }
+    .custom-container{
+        /* height: 1070px; */
+    }
+
+    
+}
+@media(max-width:580px){
+    .custom-inputf{
+        /* margin-left: 150px; */
+        width: 170px;
+    
+    }
+    hr{
+        width:170px;
+    }
+    .custom-inputs{
+        width:150px;
+        height: 35px;
+    border: 1.2px solid grey;
+    margin-bottom: 13px;
+    }
+    #fname{
+        width: 150px;
+
+    }
+    .custom-fields{
+        margin-left: 38px;
+    }
+
+    button{
+        margin-left: 130px;
+    }
+    #lname{
+        margin-left: 105px;
+        width: 150px;
+        /* height: 35px; */
+        /* border: 1.2px solid grey; */
+        
+    }
+    .qr,.h,.qrdefault{
+        position: absolute;
+        top: 0; 
+        right: 100px; 
+        width: 100px;
+        height: 100px;
+        /* margin-top: 100px; */
+        
+        margin-top: 370px;
+        /* display: none;  */
+    }
+    .qrvs{
+        margin-top: 460px;
+        /* margin-right: 50px; */
+    }
+    .custom-container{
+        /* height: 1100px; */
+    }
+    .vcards{
+        margin-left: -60px;
+    }
+    #vcard label{
+        margin-right: 0px;
+    }
+    /* .h{
+        margin-top: 300px;
+        right: 10px;
+    } */
+   
+    
+}
+@media(max-width:400px){
+    .custom-inputs{
+        width:110px;
+        height: 35px;
+}
+#fname,#lname{
+    width:110px;
+}
+.qr,.qrdefault{
+    margin-right: 40px;
+}
+
+
+}
+
+/* .custom-fields{
+    margin-left:10px;
+     position: relative;
+}    
+
+.custom-inputs{
+    width:320px;
+    height: 35px;
+border: 1.2px solid grey;
+margin-bottom: 13px;
+}
+#fname,#lname{
+    width: 150px;
+    height: 35px;
+    border: 1.2px solid grey;
+    
+}
+#fname{
+    margin-right: 10px;
+
+}
+.vcards label {
+    display: inline-block;
+    width: 50px; 
+    text-align: right;
+}
+ */

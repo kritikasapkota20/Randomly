@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="custom-container">
+        <p><span style="font-weight: bold;">QR</span>Gen*</p>
+        <div class="custom-body">
+            <div class="custom-icons">
+                <i class="fa-regular fa-file-lines" id="texticon"></i>
+                <i class="fa-solid fa-link" id="urlicon"></i>
+                <i class="fa-regular fa-address-card" id="vcardicon"></i>
+                <i class="fa-solid fa-phone" id="phoneicon"></i>
+
+            </div>
+            <div class="custom-fields">
+                <div class="custom-text" id="text">
+                    <h2 class="h">QR is displayed here: </h2>
+                    <h1>Text:</h1>
+
+                </div>
+                <div class="vcards" id="vcard" style="display: none;">
+                    <h1>Vcard:</h1>
+                    <form id="vcardform">
+                        <label for="name">Your Name: </label>
+                        <input type="text" id="fname" placeholder="First name" />
+                        <input type="text" id="lname" required placeholder="Last name" /><br>
+                        <label>Contact:</label>
+                        <!-- <input type="phone" id="phone" placeholder="Phone" /> -->
+                        <input type="phone" id="mobile" required class="custom-inputs" placeholder="Mobile" /><br>
+                        <label>Email:</label>
+                        <input type="email" id="email" required class="custom-inputs"
+                            placeholder="Your@email.com" /><br>
+                        <label>Country:</label>
+                        <input type="text" id="country" required class="custom-inputs" placeholder="Country" /><br>
+                        <label>City:</label>
+                        <input type="text" id="city" class="custom-inputs" required placeholder="City" /><br>
+                        <button id="btn1" type="submit">Generate QR Code</button>
+                    </form>
+                </div>
+
+            </div>
+            <div id="qrd" class="qr"></div>
+        </div>
+    </div>
+    <button id="btn2" onclick="generateQR()">Generate QR Code</button>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="index.js"></script>
+
+    </script>
+</body>
+
+</html>
